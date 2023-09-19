@@ -1,9 +1,14 @@
 # #EMBOIntegModelling23
+We will be using this [notebook](https://colab.research.google.com/github/sokrypton/EMBOIntegModelling23/blob/main/alphafold_advanced.ipynb)
 
-- Tutorial - alphafold advanced
-  1. Use this [notebook](https://colab.research.google.com/github/sokrypton/EMBOIntegModelling23/blob/main/alphafold_advanced.ipynb)
-  2. Use PyMol (or any 3D viewer) to compare [1X0O](https://www.rcsb.org/structure/1X0O) to [2K7S](https://www.rcsb.org/structure/2K7S), how are these different?
-  3. If you model both sequences, what conformation do you get?
+[SLIDES](https://docs.google.com/presentation/d/1TZtmbZ_JNX3tnYArUOn4cqHctJqcWaZyBo--Aa5mYy4)
+
+- Providing Templates
+  1. Try set msa_method="single_sequence" what happens?
+  2. Try set template_mode="mmseqs2" 
+- Modifying MSA
+  1. Use PyMol (or any 3D viewer) to compare [1X0O](https://www.rcsb.org/structure/1X0O) to [2K7S](https://www.rcsb.org/structure/2K7S), how are these different?
+  2. If you model both sequences, what conformation do you get?
   ```
   >1X0O
   GAMDNVCQPTEFISRHNIEGIFTFVDHRCVATVGYQPQELLGKNIVEFCHPEDQQLLRDS
@@ -12,3 +17,5 @@
   GAMDNVCQPTEFISRHNIEGIFTFVDHRCVATVGYQPQELLGKNIVEFCHPEDQQLLRDS
   FQQVVKLKGQVLSVMFRFRSKNQEWLWMRTSSQTAQNPYSDEIETIICTNTNVKNSSQE
   ```
+  3. create a code cell between prep_inputs and pre_optional_analysis, try modify `msa` array. (hint: 20 = "X", 21 = "-")
+  4. rerun the prediction
