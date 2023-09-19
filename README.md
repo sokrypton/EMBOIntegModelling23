@@ -33,3 +33,15 @@
      Run post_analysis="animate", what happens each recycle? How many recycles were needed to find solution?
   4. Set msa_method="single_sequence", template_mode="custom", pdb="2NQD", chain="A,B", do full run.
      Run post_analysis="animate", what happens each recycle? How many recycles were needed to find solution?
+
+## ANSWERS
+
+-(5)
+  ```python
+  msa[1:,-27:] = 20
+  deletion_matrix[1:,-27:] = 0
+  ```
+  - 20 = "X" unknown amino acid
+  - deletion_matrix keeps track where there are insertions relative to first sequence.
+  - `1:` beyond the first sequence ( we want to keep the first sequence untouched)
+  - `-27:` last 27 positions
